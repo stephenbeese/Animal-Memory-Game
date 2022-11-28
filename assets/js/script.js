@@ -55,8 +55,10 @@ let cards = [
 function cardPicked() {    
     alert("You have clicked a card");
     let cardId = this.getAttribute('id'); // gets id attribute
+    let name = this.getAttribute('class');
 
     console.log(cardId);
+    console.log(name);
     
     document.getElementById(cardId).style.opacity = "1"; // changes image clicked opacity to 1 
 
@@ -76,7 +78,7 @@ function createGameBoard() {
         let animalName = cards[i].name; // picks out the card name
 
         card.setAttribute('src', animalImg); // sets the image source to img element
-        card.classList.add('image', animalName); // adds image class and class of specific animal name
+        card.classList.add(animalName); // adds image class and class of specific animal name
         card.setAttribute('id', [i]); // 
 
         card.addEventListener('click', cardPicked); // adds event listener to call cardPicked function 
