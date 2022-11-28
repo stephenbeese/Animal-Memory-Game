@@ -50,11 +50,27 @@ let cards = [
     }
 ]
 
+// Randomly sorts cards and pushes them into divs with class "img-div"
+function createGameBoard() {
+    cards.sort(() => Math.random() - 0.5);
 
-function runGame();
+    let images = document.getElementsByClassName("img-div");
+    let card = document.createElement('img');
 
-function createGameBoard();
+    for (i = 0; i < cards.length; i++) {
+        let card = document.createElement('img');
+        animalImg = cards[i].img
+        card.setAttribute('src', animalImg)
+        card.setAttribute('class', 'image')
+        images[i].appendChild(card);
+        console.log(card, i)
+    }
+}
 
-function checkMatch();
+createGameBoard();
 
-function cardPicked();
+// function runGame()
+
+// function checkMatch()
+
+// function cardPicked()

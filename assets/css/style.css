@@ -44,6 +44,13 @@ h1 {
     display: inline-block;
 }
 
+/* Images */
+
+.image {
+    width: 150px;
+    height: 150px;
+}
+
 
 
 
