@@ -13,6 +13,18 @@ h1 {
     padding: 20px;
 }
 
+#rules {
+    text-align: center;
+}
+
+#rules > h3 {
+    font-size: 1.5em;
+}
+
+#rules > p {
+    font-size: 1.1em;
+}
+
 #game-board {
     width: 60%;
     margin: 0 auto;
@@ -20,7 +32,7 @@ h1 {
 }
 
 #scores-div > h3 {
-    font-size: 1em;
+    font-size: 1.4em;
 }
 
 /* grid for images to sit */
