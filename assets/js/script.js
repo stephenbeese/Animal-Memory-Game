@@ -49,9 +49,17 @@ let cards = [
         img: 'assets/images/sheep.png',
     }
 ]
+/**
+ * This function reveals the image of the card clicked
+ */
+function cardPicked() {    
+    alert("You have clicked a card");
+    let cardId = this.getAttribute('id'); // gets id attribute
 
-function cardPicked() {
-    alert("You have clicked a card")
+    console.log(cardId);
+    
+    document.getElementById(cardId).style.opacity = "1"; // changes image clicked opacity to 1 
+
 }
 
 // Randomly sorts cards and pushes them into divs with class "img-div"
@@ -69,8 +77,9 @@ function createGameBoard() {
 
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add('image', animalName); // adds image class and class of specific animal name
+        card.setAttribute('id', [i]); // 
 
-        card.addEventListener('click', cardPicked)
+        card.addEventListener('click', cardPicked); // adds event listener to call cardPicked function 
 
         images[i].appendChild(card); // adds images within "img-div" class
     }
