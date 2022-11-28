@@ -50,6 +50,10 @@ let cards = [
     }
 ]
 
+function cardPicked() {
+    alert("You have clicked a card")
+}
+
 // Randomly sorts cards and pushes them into divs with class "img-div"
 function createGameBoard() {
     cards.sort(() => Math.random() - 0.5); // randomly sorts cards array
@@ -66,14 +70,20 @@ function createGameBoard() {
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add('image', animalName); // adds image class and class of specific animal name
 
+        card.addEventListener('click', cardPicked)
+
         images[i].appendChild(card); // adds images within "img-div" class
     }
 }
 
 createGameBoard();
 
+
+
 // function runGame()
 
 // function checkMatch()
 
-// function cardPicked()
+// function cardPicked() {
+//     alert("You have clicked a card")
+// }
