@@ -51,6 +51,7 @@ let cards = [
 ]
 
 let cardsPicked = []; // empty array for picked cards
+let cardIds = [];
 /**
  * This function reveals the image of the card clicked
  */
@@ -61,6 +62,7 @@ function cardPicked() {
     // console.log(name);
 
     cardsPicked.push(name); // pushes class name into cardsPicked array.
+    cardIds.push(cardId); // pushes ids into card Ids
 
     console.log(cardsPicked);
 
@@ -94,8 +96,23 @@ function createGameBoard() {
 }
 
 function checkMatch() {
-    alert('Checking for match');
-    console.log("check for match")
+
+    let card1 = cardsPicked[0];
+    let card2 = cardsPicked[1];
+
+    let firstCardId = document.getElementById(cardIds[0]);
+    let secondCardId = document.getElementById(cardIds[1]);  
+
+    if (card1 === card2) {
+        alert("you've made a match");
+    } else {
+        firstCardId.style.opacity = "0";
+        secondCardId.style.opacity = "0";
+        alert('Not a match, please try again');
+    }
+
+    cardsPicked = []; // clears array
+    cardIds = []; // clears array
 }
 
 createGameBoard();
