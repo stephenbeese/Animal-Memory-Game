@@ -47,8 +47,11 @@ h1 {
 /* Images */
 
 .image {
-    width: 150px;
-    height: 150px;
+    width: 90%;
+    height: 85%;
+    position: relative;
+    left: 5%;
+    top: 8%;
 }
 
 
