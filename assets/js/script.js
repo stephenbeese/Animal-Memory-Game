@@ -50,3 +50,11 @@ let cards = [
     }
 ]
 
+
+function runGame();
+
+function createGameBoard();
+
+function checkMatch();
+
+function cardPicked();
