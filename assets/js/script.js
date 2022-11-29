@@ -118,6 +118,9 @@ function checkMatch() {
     cardIds = []; // clears array
 }
 
+/**
+ * adds 20 points to the score when a match has been made 
+ */
 function addScore() {
     let score = document.getElementById('score');
     let addScore = parseInt(score.innerHTML) + 20;

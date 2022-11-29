@@ -25,6 +25,18 @@ h1 {
     font-size: 1.1em;
 }
 
+#start {
+    margin: 0px 40%;
+    width: 20%;
+    height: 50px;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 15px;
+    border-width: 0px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
 #game-board {
     width: 60%;
     margin: 0 auto;
@@ -54,10 +66,6 @@ img {
     top: 8%;
     opacity: 0;
 }
-
-/* .cat .chicken .cow .duck .pig .sheep {
-
-} */
 
 
 
