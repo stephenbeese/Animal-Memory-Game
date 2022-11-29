@@ -51,7 +51,8 @@ let cards = [
 ]
 
 let cardsPicked = []; // empty array for picked cards
-let cardIds = [];
+let cardIds = []; // empty array for picked cards id
+
 /**
  * This function reveals the image of the card clicked
  */
@@ -59,7 +60,6 @@ function cardPicked() {
     let cardId = this.getAttribute('id'); // gets id attribute
     let name = this.getAttribute('class'); // gets class attribute
     document.getElementById(cardId).style.opacity = "1"; // changes image clicked opacity to 1 
-    // console.log(name);
 
     cardsPicked.push(name); // pushes class name into cardsPicked array.
     cardIds.push(cardId); // pushes ids into card Ids
@@ -94,7 +94,9 @@ function createGameBoard() {
         images[i].appendChild(card); // adds images within "img-div" class
     }
 }
-
+/**
+ * checks for a match 
+ */
 function checkMatch() {
 
     let card1 = cardsPicked[0];
@@ -104,24 +106,25 @@ function checkMatch() {
     let secondCardId = document.getElementById(cardIds[1]);  
 
     if (card1 === card2) {
-        alert("you've made a match");
+        // alert("you've made a match");
+        addScore();
     } else {
         firstCardId.style.opacity = "0";
         secondCardId.style.opacity = "0";
-        alert('Not a match, please try again');
+        // alert('Not a match, please try again');
     }
 
     cardsPicked = []; // clears array
     cardIds = []; // clears array
 }
 
+function addScore() {
+    let score = document.getElementById('score');
+    let addScore = parseInt(score.innerHTML) + 20;
+    score.innerHTML = addScore;
+}
+
 createGameBoard();
 
 
 // function runGame()
-
-
-
-// function cardPicked() {
-//     alert("You have clicked a card")
-// }
