@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function(){
+    let start = document.getElementById('start');
+    start.addEventListener('click', runGame);
+});
+
 // Array for card images
 let cards = [
     {
@@ -52,6 +57,12 @@ let cards = [
 
 let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
+
+function runGame() {
+    alert('you have ran the game');
+    createGameBoard();
+    // setTimer();
+}
 
 /**
  * This function reveals the image of the card clicked
@@ -108,7 +119,7 @@ function checkMatch() {
     // secondCardId.removeEventListener('click', cardPicked);
 
     if (card1 === card2) {
-        addScore();
+        setTimeout(addScore, 500);
     } else {
         firstCardId.style.opacity = "0";
         secondCardId.style.opacity = "0";
@@ -127,9 +138,18 @@ function addScore() {
     let score = document.getElementById('score');
     let addScore = parseInt(score.innerHTML) + 20;
     score.innerHTML = addScore;
+    console.log(score.innerHTML);
+
+    if (score.innerHTML === '120') {
+        alert('you have won the game refresh the browser to try again')
+        // resetGame();
+    }
 }
+// function resetGame() {
+//     let cards = document.getElementsByClassName('img-div');
 
-createGameBoard();
+//     cards.removeChild(cards.children);
+// }
 
+// function setTimer()
 
-// function runGame()
