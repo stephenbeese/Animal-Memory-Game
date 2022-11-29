@@ -64,12 +64,11 @@ function cardPicked() {
     cardsPicked.push(name); // pushes class name into cardsPicked array.
     cardIds.push(cardId); // pushes ids into card Ids
 
-    console.log(cardsPicked);
+    document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
 
     if (cardsPicked.length === 2) {
         setTimeout(checkMatch, 500);
     }
-
 }
 
 // Randomly sorts cards and pushes them into divs with class "img-div"
@@ -77,7 +76,7 @@ function createGameBoard() {
     cards.sort(() => Math.random() - 0.5); // randomly sorts cards array
 
     let images = document.getElementsByClassName("img-div");
-    let card = document.createElement('img');
+    // let card = document.createElement('img');
 
     for (i = 0; i < cards.length; i++) {
         let card = document.createElement('img'); // creates img element
@@ -103,15 +102,18 @@ function checkMatch() {
     let card2 = cardsPicked[1];
 
     let firstCardId = document.getElementById(cardIds[0]);
-    let secondCardId = document.getElementById(cardIds[1]);  
+    let secondCardId = document.getElementById(cardIds[1]); 
+    
+    // firstCardId.removeEventListener('click', cardPicked);
+    // secondCardId.removeEventListener('click', cardPicked);
 
     if (card1 === card2) {
-        // alert("you've made a match");
         addScore();
     } else {
         firstCardId.style.opacity = "0";
         secondCardId.style.opacity = "0";
-        // alert('Not a match, please try again');
+        firstCardId.addEventListener('click', cardPicked);
+        secondCardId.addEventListener('click', cardPicked);
     }
 
     cardsPicked = []; // clears array
