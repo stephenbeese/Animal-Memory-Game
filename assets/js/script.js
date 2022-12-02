@@ -59,7 +59,17 @@ let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
 
 function runGame() {
-    alert('you have ran the game');
+
+    let score = document.getElementById('score');
+    if (score.innerHTML === '120') { // tests if a game has been completed yet 
+        score.innerHTML = '0'; // resets game score when starting a new game
+
+        for (i = 0; i < 12; i++) { // deletes images ready for the next game 
+            let images = document.getElementById([i]); 
+            imgDiv = images.parentNode;
+            imgDiv.removeChild(images);
+        }
+    }
     createGameBoard();
     // setTimer();
 }
@@ -87,7 +97,6 @@ function createGameBoard() {
     cards.sort(() => Math.random() - 0.5); // randomly sorts cards array
 
     let images = document.getElementsByClassName("img-div");
-    // let card = document.createElement('img');
 
     for (i = 0; i < cards.length; i++) {
         let card = document.createElement('img'); // creates img element
@@ -138,18 +147,12 @@ function addScore() {
     let score = document.getElementById('score');
     let addScore = parseInt(score.innerHTML) + 20;
     score.innerHTML = addScore;
-    console.log(score.innerHTML);
 
     if (score.innerHTML === '120') {
         alert('you have won the game refresh the browser to try again')
         // resetGame();
     }
 }
-// function resetGame() {
-//     let cards = document.getElementsByClassName('img-div');
-
-//     cards.removeChild(cards.children);
-// }
 
 // function setTimer()
 
