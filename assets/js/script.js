@@ -90,7 +90,7 @@ function cardPicked() {
     document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
 
     if (cardsPicked.length === 2) {
-        setTimeout(checkMatch, 500);
+        setTimeout(checkMatch, 100)
     }
 }
 
@@ -108,7 +108,7 @@ function createGameBoard() {
 
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add(animalName); // adds image class and class of specific animal name
-        card.setAttribute('id', [i]); // sets id attribut to index number
+        card.setAttribute('id', [i]); // sets id attribute to index number
 
         card.addEventListener('click', cardPicked); // adds event listener to call cardPicked function 
 
@@ -125,16 +125,27 @@ function checkMatch() {
 
     let firstCardId = document.getElementById(cardIds[0]);
     let secondCardId = document.getElementById(cardIds[1]); 
-    
-    // firstCardId.removeEventListener('click', cardPicked);
-    // secondCardId.removeEventListener('click', cardPicked);
 
+    let firstCardParent = firstCardId.parentNode;
+    let secondCardParent = secondCardId.parentNode;
+    
+    
     if (card1 === card2) {
         setTimeout(addScore, 500);
+        firstCardParent.classList.add('green'); // changes matched cards backgrounds to green 
+        secondCardParent.classList.add('green');
     } else {
-        firstCardId.style.opacity = "0";
+        firstCardParent.classList.add('red'); // sets unmatched cards background to red 
+        secondCardParent.classList.add('red');
+        setTimeout(removeImage, 500);
+    }
+
+    function removeImage(){
+        firstCardParent.classList.remove('red'); // removes red background
+        secondCardParent.classList.remove('red'); 
+        firstCardId.style.opacity = "0"; // makes image transparent again
         secondCardId.style.opacity = "0";
-        firstCardId.addEventListener('click', cardPicked);
+        firstCardId.addEventListener('click', cardPicked); // adds event listener back to image
         secondCardId.addEventListener('click', cardPicked);
     }
 
@@ -151,7 +162,7 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
-        alert('you have won the game refresh the browser to try again')
+        alert('You have won the game, press start to play again!')
         let start = document.getElementById('start');
         start.addEventListener('click', runGame) // adds eventlistener back to start button
     }
