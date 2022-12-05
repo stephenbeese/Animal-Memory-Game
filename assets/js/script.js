@@ -59,6 +59,8 @@ let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
 
 function runGame() {
+    let start = document.getElementById('start'); 
+    start.removeEventListener('click', runGame); // removes event listener to start game 
 
     let score = document.getElementById('score');
     if (score.innerHTML === '120') { // tests if a game has been completed yet 
@@ -150,7 +152,8 @@ function addScore() {
 
     if (score.innerHTML === '120') {
         alert('you have won the game refresh the browser to try again')
-        // resetGame();
+        let start = document.getElementById('start');
+        start.addEventListener('click', runGame) // adds eventlistener back to start button
     }
 }
 
