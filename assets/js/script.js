@@ -70,7 +70,9 @@ function runGame() {
             let images = document.getElementById([i]); 
             imgDiv = images.parentNode;
             imgDiv.removeChild(images);
+            imgDiv.classList.remove('green') // removes green class when starting a new game 
         }
+
     }
     createGameBoard();
     // setTimer();
