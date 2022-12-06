@@ -37,7 +37,7 @@ h1 {
 
 #start {
     font-family: amatic SC;
-    margin: 0px 40%;
+    margin: 0px 40% 20px;
     width: 20%;
     height: 50px;
     background-color: #27bbcb;
@@ -61,6 +61,7 @@ h1 {
 #grid {
     text-align: center;
     height: 500px;
+    margin-bottom: 30px;
 }
 
 /* grid for images to sit */
@@ -96,8 +97,8 @@ img {
     text-align: center;
     font-size: 1.3em;
     position: relative;
-    top: 40px;
-    margin-top: -30px;
+    top: 65px;
+    margin-top: -75px;
     opacity: 0;
 }
 
