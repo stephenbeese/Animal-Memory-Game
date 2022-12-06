@@ -130,7 +130,7 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
-        message.innerHTML = "You have won the game, press start to play again!";
+        message.innerHTML = "Congratulations! You win!<br>Press start to play again</br>";
         message.style.opacity = "1";
         let start = document.getElementById('start');
         start.addEventListener('click', runGame); // adds eventlistener back to start button
