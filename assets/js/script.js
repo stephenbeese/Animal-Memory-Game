@@ -1,11 +1,10 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     let start = document.getElementById('start');
     start.addEventListener('click', runGame);
 });
 
 // Array for card images
-let cards = [
-    {
+let cards = [{
         name: 'cat',
         img: 'assets/images/cat.png',
     },
@@ -53,13 +52,13 @@ let cards = [
         name: 'sheep',
         img: 'assets/images/sheep.png',
     }
-]
+];
 
 let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
 
 function runGame() {
-    let start = document.getElementById('start'); 
+    let start = document.getElementById('start');
     start.removeEventListener('click', runGame); // removes event listener to start game 
 
     let score = document.getElementById('score');
@@ -67,38 +66,20 @@ function runGame() {
         score.innerHTML = '0'; // resets game score when starting a new game
 
         for (i = 0; i < 12; i++) { // deletes images ready for the next game 
-            let images = document.getElementById([i]); 
+            let images = document.getElementById([i]);
             imgDiv = images.parentNode;
             imgDiv.removeChild(images);
-            imgDiv.classList.remove('green') // removes green class when starting a new game 
+            imgDiv.classList.remove('green'); // removes green class when starting a new game 
         }
-        message.innerHTML = 'Start matching!'
+        message.innerHTML = 'Start matching!';
     }
     createGameBoard();
     // setTimer();
 }
 
 /**
- * This function reveals the image of the card clicked
+ * Randomly sorts cards and pushes them into divs with class "img-div"
  */
-function cardPicked() {
-    let cardId = this.getAttribute('id'); // gets id attribute
-    let name = this.getAttribute('class'); // gets class attribute
-    document.getElementById(cardId).style.opacity = "1"; // changes image clicked opacity to 1 
-
-    cardsPicked.push(name); // pushes class name into cardsPicked array.
-    cardIds.push(cardId); // pushes ids into card Ids
-
-    document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
-
-    message.style.opacity = '0'
-
-    if (cardsPicked.length === 2) {
-        setTimeout(checkMatch, 100)
-    }
-}
-
-// Randomly sorts cards and pushes them into divs with class "img-div"
 function createGameBoard() {
     cards.sort(() => Math.random() - 0.5); // randomly sorts cards array
 
@@ -120,8 +101,29 @@ function createGameBoard() {
     }
 
     let message = document.getElementById('message');
-    message.style.opacity = '1'
+    message.style.opacity = '1';
 }
+
+/**
+ * This function reveals the image of the card clicked
+ */
+function cardPicked() {
+    let cardId = this.getAttribute('id'); // gets id attribute
+    let name = this.getAttribute('class'); // gets class attribute
+    document.getElementById(cardId).style.opacity = "1"; // changes image clicked opacity to 1 
+
+    cardsPicked.push(name); // pushes class name into cardsPicked array.
+    cardIds.push(cardId); // pushes ids into card Ids
+
+    document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
+
+    message.style.opacity = '0';
+
+    if (cardsPicked.length === 2) {
+        setTimeout(checkMatch, 100);
+    }
+}
+
 /**
  * checks for a match 
  */
@@ -131,28 +133,28 @@ function checkMatch() {
     let card2 = cardsPicked[1];
 
     let firstCardId = document.getElementById(cardIds[0]);
-    let secondCardId = document.getElementById(cardIds[1]); 
+    let secondCardId = document.getElementById(cardIds[1]);
 
     let firstCardParent = firstCardId.parentNode;
     let secondCardParent = secondCardId.parentNode;
-    
+
     if (card1 === card2) {
         setTimeout(addScore, 500);
         firstCardParent.classList.add('green'); // changes matched cards backgrounds to green 
         secondCardParent.classList.add('green');
-        message.innerHTML = "You've found a match!"
-        message.style.opacity = "1"
+        message.innerHTML = "You've found a match!";
+        message.style.opacity = "1";
     } else {
         firstCardParent.classList.add('red'); // sets unmatched cards background to red 
         secondCardParent.classList.add('red');
         setTimeout(removeImage, 500);
-        message.innerHTML = "Not a match, please try again"
-        message.style.opacity = "1"
+        message.innerHTML = "Not a match, please try again";
+        message.style.opacity = "1";
     }
 
-    function removeImage(){
+    function removeImage() {
         firstCardParent.classList.remove('red'); // removes red background
-        secondCardParent.classList.remove('red'); 
+        secondCardParent.classList.remove('red');
         firstCardId.style.opacity = "0"; // makes image transparent again
         secondCardId.style.opacity = "0";
         firstCardId.addEventListener('click', cardPicked); // adds event listener back to image
@@ -172,12 +174,11 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
-        message.innerHTML = "You have won the game, press start to play again!"
-        message.style.opacity = "1"
+        message.innerHTML = "You have won the game, press start to play again!";
+        message.style.opacity = "1";
         let start = document.getElementById('start');
-        start.addEventListener('click', runGame) // adds eventlistener back to start button
+        start.addEventListener('click', runGame); // adds eventlistener back to start button
     }
 }
 
 // function setTimer()
-
