@@ -120,7 +120,7 @@ function createGameBoard() {
     }
 
     let message = document.getElementById('message');
-    message.innerHTML = 'Start matching!'
+    message.style.opacity = '1'
 }
 /**
  * checks for a match 
