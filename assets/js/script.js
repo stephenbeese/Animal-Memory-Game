@@ -91,6 +91,8 @@ function cardPicked() {
 
     document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
 
+    message.style.opacity = '0'
+
     if (cardsPicked.length === 2) {
         setTimeout(checkMatch, 100)
     }
@@ -116,6 +118,9 @@ function createGameBoard() {
 
         images[i].appendChild(card); // adds images within "img-div" class
     }
+
+    let message = document.getElementById('message');
+    message.innerHTML = 'Start matching!'
 }
 /**
  * checks for a match 
@@ -131,15 +136,18 @@ function checkMatch() {
     let firstCardParent = firstCardId.parentNode;
     let secondCardParent = secondCardId.parentNode;
     
-    
     if (card1 === card2) {
         setTimeout(addScore, 500);
         firstCardParent.classList.add('green'); // changes matched cards backgrounds to green 
         secondCardParent.classList.add('green');
+        message.innerHTML = "You've found a match!"
+        message.style.opacity = "1"
     } else {
         firstCardParent.classList.add('red'); // sets unmatched cards background to red 
         secondCardParent.classList.add('red');
         setTimeout(removeImage, 500);
+        message.innerHTML = "Not a match, please try again"
+        message.style.opacity = "1"
     }
 
     function removeImage(){
@@ -164,7 +172,8 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
-        alert('You have won the game, press start to play again!')
+        message.innerHTML = "You have won the game, press start to play again!"
+        message.style.opacity = "1"
         let start = document.getElementById('start');
         start.addEventListener('click', runGame) // adds eventlistener back to start button
     }
