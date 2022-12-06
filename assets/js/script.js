@@ -3,56 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     start.addEventListener('click', runGame);
 });
 
-// Array for card images
-let cards = [{
-        name: 'cat',
-        img: 'assets/images/cat.png',
-    },
-    {
-        name: 'chicken',
-        img: 'assets/images/chicken.png',
-    },
-    {
-        name: 'cow',
-        img: 'assets/images/cow.png',
-    },
-    {
-        name: 'duck',
-        img: 'assets/images/duck.png',
-    },
-    {
-        name: 'pig',
-        img: 'assets/images/pig.png',
-    },
-    {
-        name: 'sheep',
-        img: 'assets/images/sheep.png',
-    },
-    {
-        name: 'cat',
-        img: 'assets/images/cat.png',
-    },
-    {
-        name: 'chicken',
-        img: 'assets/images/chicken.png',
-    },
-    {
-        name: 'cow',
-        img: 'assets/images/cow.png',
-    },
-    {
-        name: 'duck',
-        img: 'assets/images/duck.png',
-    },
-    {
-        name: 'pig',
-        img: 'assets/images/pig.png',
-    },
-    {
-        name: 'sheep',
-        img: 'assets/images/sheep.png',
-    }
-];
+let cards = ['chicken', 'cow', 'pig', 'sheep', 'duck', 'cat']; // Array for card images
+cards = cards.concat(cards); // doubles array
 
 let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
@@ -88,8 +40,12 @@ function createGameBoard() {
     for (i = 0; i < cards.length; i++) {
         let card = document.createElement('img'); // creates img element
 
-        let animalImg = cards[i].img; // picks out the image file path
-        let animalName = cards[i].name; // picks out the card name
+        let animalName = cards[i]; // picks out the card name
+        console.log(animalName);
+        console.log(cards[i]);
+        let animalImg = `assets/images/${animalName}.png`; // picks out the image file path
+        
+        
 
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add(animalName); // adds image class and class of specific animal name
