@@ -26,7 +26,6 @@ function runGame() {
         message.innerHTML = 'Start matching!';
     }
     createGameBoard();
-    // setTimer();
 }
 
 /**
@@ -41,12 +40,8 @@ function createGameBoard() {
         let card = document.createElement('img'); // creates img element
 
         let animalName = cards[i]; // picks out the card name
-        console.log(animalName);
-        console.log(cards[i]);
         let animalImg = `assets/images/${animalName}.png`; // picks out the image file path
         
-        
-
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add(animalName); // adds image class and class of specific animal name
         card.setAttribute('id', [i]); // sets id attribute to index number
@@ -58,6 +53,8 @@ function createGameBoard() {
 
     let message = document.getElementById('message');
     message.style.opacity = '1';
+
+    setTimer();
 }
 
 /**
@@ -130,11 +127,26 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
+        // stopTimer();
         message.innerHTML = "Congratulations! You win!<br>Press start to play again</br>";
         message.style.opacity = "1";
         let start = document.getElementById('start');
         start.addEventListener('click', runGame); // adds eventlistener back to start button
+        
     }
 }
 
-// function setTimer()
+function setTimer() {
+   var time = 0
+   let timer = document.getElementById('timer');
+   let score = document.getElementById('score').innerHTML;
+
+   var timeIncrease = setInterval(function() {
+    ++time;
+    timer.innerHTML = time;
+   }, 1000);
+}
+
+// function stopTimer() {
+//       
+// }
