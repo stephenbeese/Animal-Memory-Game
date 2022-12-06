@@ -26,6 +26,7 @@ function runGame() {
         message.innerHTML = 'Start matching!';
     }
     createGameBoard();
+    setTimer();
 }
 
 /**
@@ -53,8 +54,6 @@ function createGameBoard() {
 
     let message = document.getElementById('message');
     message.style.opacity = '1';
-
-    setTimer();
 }
 
 /**
@@ -118,6 +117,21 @@ function checkMatch() {
     cardIds = []; // clears array
 }
 
+function setTimer() {
+    var time = 0
+    let timer = document.getElementById('timer');
+    let score = document.getElementById('score');
+
+     var timeIncrease = setInterval(function(){
+     ++time;
+     timer.innerHTML = time;
+
+     if (score.innerHTML === '120') {
+        clearInterval(timeIncrease);
+     }
+    }, 1000);
+ }
+
 /**
  * adds 20 points to the score when a match has been made 
  */
@@ -127,7 +141,6 @@ function addScore() {
     score.innerHTML = addScore;
 
     if (score.innerHTML === '120') {
-        // stopTimer();
         message.innerHTML = "Congratulations! You win!<br>Press start to play again</br>";
         message.style.opacity = "1";
         let start = document.getElementById('start');
@@ -135,18 +148,3 @@ function addScore() {
         
     }
 }
-
-function setTimer() {
-   var time = 0
-   let timer = document.getElementById('timer');
-   let score = document.getElementById('score').innerHTML;
-
-   var timeIncrease = setInterval(function() {
-    ++time;
-    timer.innerHTML = time;
-   }, 1000);
-}
-
-// function stopTimer() {
-//       
-// }
