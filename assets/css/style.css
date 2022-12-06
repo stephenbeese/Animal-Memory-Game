@@ -124,6 +124,19 @@ img {
         margin: 2px;
     }
 
+    #rules > h2 {
+        font-size: 1.7em;
+    }
+
+    #rules > p {
+        font-size: 1.2em;
+    }
+
+    #start {
+        font-size: 1.7em;
+        height: 40px;
+    }
+
     #message {
         font-size: 1.2em;
         margin-bottom: 15px;
@@ -131,6 +144,30 @@ img {
 
     #scores-div > h3 {
         font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    #message {
+        position: unset;
+        margin: 0;
+        font-size: 1.3em;
+    }
+
+    #scores-div > h3 {
+        font-size: 1.4em;
+    }
+
+    img {
+        max-width: 90%;
+        height: 80%;
+        top: 12px;
+    }
+
+    .img-div {
+        width: 23%;
+        height: 19%;
+        margin: 1px;
     }
 }
 
