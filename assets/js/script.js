@@ -72,7 +72,7 @@ function runGame() {
             imgDiv.removeChild(images);
             imgDiv.classList.remove('green') // removes green class when starting a new game 
         }
-
+        message.innerHTML = 'Start matching!'
     }
     createGameBoard();
     // setTimer();
