@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,41 +11,43 @@
     <title>Memory Game</title>
     <link rel="icon" href="assets/images/favicon.ico">
 </head>
+
 <body>
     <main>
-    <h1>Animal Memory Game</h1>
+        <h1>Animal Memory Game</h1>
 
-    <div id="rules">
-        <h3>How to play</h3>
-        <p>Click on the cards to make a match. Try and match all the cards in the quickest time.</p>
-    </div>
+        <div id="rules">
+            <h2>How to play</h2>
+            <p>Click on the cards to make a match. Try and match all the cards in the quickest time.</p>
+        </div>
 
         <!-- Below is the gameboard that will be filled using javascript -->
-    <div id="game-board">
-        <button type="submit" id="start">Start Game</button>
-        <p id="message">Start matching!</p>
+        <div id="game-board">
+            <button type="submit" id="start">Start Game</button>
+            <p id="message">Start matching!</p>
 
-        <div id="scores-div">
-            <h3>Score: <span id="score">0</span></h3>
-            <h3>Timer: <span id="timer"></span></h3>
+            <div id="scores-div">
+                <h3>Score: <span id="score">0</span></h3>
+                <h3>Timer: <span id="timer"></span></h3>
+            </div>
+            <div id="grid">
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+                <div class="img-div"></div>
+            </div>
         </div>
-        <div id="grid" >
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-            <div class="img-div"></div>
-        </div>
-    </div>
     </main>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
