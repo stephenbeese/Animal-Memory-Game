@@ -45,6 +45,8 @@ h1 {
     border-width: 0px;
     text-align: center;
     font-size: 2em;
+    font-weight: 800;
+    color: white;
 }
 
 #game-board {
@@ -96,9 +98,7 @@ img {
     font-family: Indie Flower, sans-serif;
     text-align: center;
     font-size: 1.3em;
-    /* position: relative; */
     top: 65px;
-    /* margin-top: -75px; */
     margin-bottom: 0.5em;
     opacity: 0;
 }
