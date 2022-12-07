@@ -96,10 +96,19 @@ img {
     font-family: Indie Flower, sans-serif;
     text-align: center;
     font-size: 1.3em;
-    position: relative;
+    /* position: relative; */
     top: 65px;
-    margin-top: -75px;
+    /* margin-top: -75px; */
+    margin-bottom: 0.5em;
     opacity: 0;
+}
+
+.text-right {
+    text-align: right;
+    margin-right: 1em;
+    position: relative;
+    top: -1.6em;
+    margin-bottom: -35px;
 }
 
 /* Responsive Design */
@@ -109,11 +118,6 @@ img {
         width: 20%;
         height: 27%;
         margin: 3px;
-    }
-
-    #message {
-        position: unset;
-        margin: 0;
     }
 }
 
