@@ -8,6 +8,7 @@ cards = cards.concat(cards); // doubles array
 
 let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
+let highScores = [];
 
 function runGame() {
     let start = document.getElementById('start');
@@ -24,6 +25,7 @@ function runGame() {
             imgDiv.classList.remove('green'); // removes green class when starting a new game 
         }
         message.innerHTML = 'Start matching!';
+        // updateHighScore();
     }
     createGameBoard();
     setTimer();
@@ -150,6 +152,33 @@ function addScore() {
         message.style.opacity = "1";
         let start = document.getElementById('start');
         start.addEventListener('click', runGame); // adds eventlistener back to start button
-        
+
+        setTimeout(updateHighScore, 2000)
     }
+}
+
+function updateHighScore() {
+    let completionTime = document.getElementById('timer').innerHTML;
+    console.log(completionTime);
+    highScores.push(completionTime);
+    highScores.sort();
+    console.log(highScores)
+
+    let highScoreOne = document.getElementById('score-one');
+    let highScoreTwo = document.getElementById('score-two');
+    let highScoreThree = document.getElementById('score-three');
+
+    if (highScores.length === 1) {
+        highScoreOne.innerHTML = `${highScores[0]} seconds`;
+    } else if (highScores.length === 2) {
+        highScoreOne.innerHTML = `${highScores[0]} seconds`
+        highScoreTwo.innerHTML = `${highScores[1]} seconds`;
+    } else if (highScores.length >= 3) {
+        highScoreOne.innerHTML = `${highScores[0]} seconds`;
+        highScoreTwo.innerHTML = `${highScores[1]} seconds`;
+        highScoreThree.innerHTML = `${highScores[2]} seconds`;
+    }
+    
+    // highScoreTwo.innerHTML = `${highScores[1]}seconds`;
+    // highScoreThree.innerHTML = `${highScores[2]}seconds`;
 }
