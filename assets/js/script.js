@@ -19,7 +19,7 @@ function runGame() {
 
         for (i = 0; i < 12; i++) { // deletes images ready for the next game 
             let images = document.getElementById([i]);
-            imgDiv = images.parentNode;
+            let imgDiv = images.parentNode;
             imgDiv.removeChild(images);
             imgDiv.classList.remove('green'); // removes green class when starting a new game 
         }
@@ -125,10 +125,14 @@ function setTimer() {
      var timeIncrease = setInterval(function(){
      ++time;
      timer.innerHTML = time;
+    
+    var checkScore = setInterval(function(){ // checks if score is 120 every 500 milliseconds to turn off timer
+        if (score.innerHTML === '120') {
+            clearInterval(timeIncrease);
+            clearInterval(checkScore);
+         }
+     }, 500);
 
-     if (score.innerHTML === '120') {
-        clearInterval(timeIncrease);
-     }
     }, 1000);
  }
 
