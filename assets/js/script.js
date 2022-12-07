@@ -143,9 +143,10 @@ function addScore() {
     let score = document.getElementById('score');
     let addScore = parseInt(score.innerHTML) + 20;
     score.innerHTML = addScore;
+    let completionTime = document.getElementById('timer').innerHTML;
 
     if (score.innerHTML === '120') {
-        message.innerHTML = "Congratulations! You win!<br>Press start to play again</br>";
+        message.innerHTML = `Congratulations! You matched the cards in ${completionTime} seconds!<br>Press start to play again</br>`;
         message.style.opacity = "1";
         let start = document.getElementById('start');
         start.addEventListener('click', runGame); // adds eventlistener back to start button
