@@ -112,14 +112,38 @@ img {
 }
 
 .high-scores {
-    text-align: center;
+    font-family: Indie Flower;
+    font-size: 2em;
+    float: right;
+    position: relative;
+    right: 75px;
+    top: -500px;
 }
 
-.high-scores > li {
-    color: black;
+/* .high-scores > h3 {
+    font-size: 2em;
+} */
+
+#high-scores {
+    position: relative;
+    left: 50px;
 }
+
+/* #high-scores > li {
+    color: black;
+    font-size: 2em;
+} */
 
 /* Responsive Design */
+
+@media only screen and (max-width: 1400px) {
+    .high-scores {
+        float: unset;
+        position: unset;
+        max-width: fit-content;
+        margin: 0 auto 20px;        
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .img-div {
@@ -127,11 +151,20 @@ img {
         height: 27%;
         margin: 3px;
     }
+
+    .high-scores {
+        margin-top: -85px;
+    }
 }
 
 @media only screen and (max-width: 560px) {
     .img-div {
         height: 20%;
+    }
+
+    .high-scores {
+        margin-top: -185px;
+        font-size: 1.7em;
     }
 }
 
@@ -178,6 +211,11 @@ img {
         width: 23%;
         height: 19%;
         margin: 1px;
+    }
+
+    .high-scores {
+        margin-top: -220px;
+        font-size: 1.5em;
     }
 }
 
