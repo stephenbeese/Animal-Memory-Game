@@ -8,9 +8,6 @@
 body {
     background-color: #fff93be3;
 }
-main {
-    height: 100%;
-}
 
 h1 {
     text-align: center;
@@ -62,7 +59,7 @@ h1 {
 
 #grid {
     text-align: center;
-    height: 500px;
+    height: fit-content;
     margin-bottom: 30px;
 }
 
@@ -120,21 +117,65 @@ img {
     top: -500px;
 }
 
-/* .high-scores > h3 {
-    font-size: 2em;
-} */
-
 #high-scores {
     position: relative;
     left: 50px;
 }
 
-/* #high-scores > li {
-    color: black;
-    font-size: 2em;
-} */
-
 /* Responsive Design */
+
+@media only screen and (min-width: 1500px) {
+    h1 {
+        font-size: 7em;
+    }
+
+    #rules > h2 {
+        font-size: 4em;
+    }
+
+    #rules > p {
+        font-size: 2.3em;
+    }
+
+    #start {
+        height: 100px;
+        font-size: 5em;
+    }
+
+    #scores-div > h3 {
+        font-size: 3em;
+        margin-bottom: -35px;
+    }
+
+    #message {
+        font-size: 3em;
+    }
+
+    .text-right {
+        top: -40px;
+    }
+
+    #game-board {
+        max-width: 1400px;
+    }
+
+    .img-div {
+        width: 300px;
+        height: 300px;
+    }
+
+    .high-scores {
+        float: unset;
+        position: unset;
+        max-width: fit-content;
+        margin: 0 auto 20px; 
+        font-size: 3em;       
+    }
+
+    #high-scores {
+        left: 100px;
+    }
+}
 
 @media only screen and (max-width: 1400px) {
     .high-scores {
@@ -148,22 +189,17 @@ img {
 @media only screen and (max-width: 768px) {
     .img-div {
         width: 20%;
-        height: 27%;
+        height: 100px;
         margin: 3px;
     }
 
     .high-scores {
-        margin-top: -85px;
+        margin-top: -30px;
     }
 }
 
 @media only screen and (max-width: 560px) {
-    .img-div {
-        height: 20%;
-    }
-
     .high-scores {
-        margin-top: -185px;
         font-size: 1.7em;
     }
 }
@@ -209,12 +245,11 @@ img {
 
     .img-div {
         width: 23%;
-        height: 19%;
+        height: 80px;
         margin: 1px;
     }
 
     .high-scores {
-        margin-top: -220px;
         font-size: 1.5em;
     }
 }
