@@ -128,12 +128,12 @@ function setTimer() {
      ++time;
      timer.innerHTML = time;
     
-    var checkScore = setInterval(function(){ // checks if score is 120 every 500 milliseconds to turn off timer
+    var checkScore = setInterval(function(){ // checks if score is 120 every 1000 milliseconds to turn off timer
         if (score.innerHTML === '120') {
             clearInterval(timeIncrease);
             clearInterval(checkScore);
          }
-     }, 500);
+     }, 100);
 
     }, 1000);
  }
@@ -160,8 +160,8 @@ function addScore() {
 function updateHighScore() {
     let completionTime = document.getElementById('timer').innerHTML;
     console.log(completionTime);
-    highScores.push(completionTime);
-    highScores.sort();
+    highScores.push(parseInt(completionTime));
+    highScores.sort((a, b) => a - b);
     console.log(highScores)
 
     let highScoreOne = document.getElementById('score-one');
@@ -178,7 +178,4 @@ function updateHighScore() {
         highScoreTwo.innerHTML = `${highScores[1]} seconds`;
         highScoreThree.innerHTML = `${highScores[2]} seconds`;
     }
-    
-    // highScoreTwo.innerHTML = `${highScores[1]}seconds`;
-    // highScoreThree.innerHTML = `${highScores[2]}seconds`;
 }
