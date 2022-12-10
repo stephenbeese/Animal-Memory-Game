@@ -44,7 +44,7 @@ function createGameBoard() {
 
         let animalName = cards[i]; // picks out the card name
         let animalImg = `assets/images/${animalName}.png`; // picks out the image file path
-        
+
         card.setAttribute('src', animalImg); // sets the image source to img element
         card.classList.add(animalName); // adds image class and class of specific animal name
         card.setAttribute('id', [i]); // sets id attribute to index number
@@ -124,19 +124,19 @@ function setTimer() {
     let timer = document.getElementById('timer');
     let score = document.getElementById('score');
 
-     var timeIncrease = setInterval(function(){
-     ++time;
-     timer.innerHTML = time;
-    
-    var checkScore = setInterval(function(){ // checks if score is 120 every 1000 milliseconds to turn off timer
-        if (score.innerHTML === '120') {
-            clearInterval(timeIncrease);
-            clearInterval(checkScore);
-         }
-     }, 100);
+    var timeIncrease = setInterval(function () {
+        ++time;
+        timer.innerHTML = time;
+
+        var checkScore = setInterval(function () { // checks if score is 120 every 1000 milliseconds to turn off timer
+            if (score.innerHTML === '120') {
+                clearInterval(timeIncrease);
+                clearInterval(checkScore);
+            }
+        }, 100);
 
     }, 1000);
- }
+}
 
 /**
  * adds 20 points to the score when a match has been made 

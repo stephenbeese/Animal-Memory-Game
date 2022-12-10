@@ -23,12 +23,12 @@ h1 {
     margin: 0 10px;
 }
 
-#rules > h2 {
+#rules>h2 {
     font-family: 'Indie Flower', sans-serif;
     font-size: 2em;
 }
 
-#rules > p {
+#rules>p {
     font-family: 'Indie Flower', sans-serif;
     font-size: 1.3em;
 }
@@ -51,7 +51,7 @@ h1 {
     margin: 0 auto;
 }
 
-#scores-div > h3 {
+#scores-div>h3 {
     font-family: 'Indie Flower', sans-serif;
     font-size: 1.6em;
     margin-left: 1em;
@@ -128,11 +128,11 @@ img {
         font-size: 7em;
     }
 
-    #rules > h2 {
+    #rules>h2 {
         font-size: 4em;
     }
 
-    #rules > p {
+    #rules>p {
         font-size: 2.3em;
     }
 
@@ -141,7 +141,7 @@ img {
         font-size: 5em;
     }
 
-    #scores-div > h3 {
+    #scores-div>h3 {
         font-size: 3em;
         margin-bottom: -35px;
     }
@@ -167,8 +167,8 @@ img {
         float: unset;
         position: unset;
         max-width: fit-content;
-        margin: 0 auto 20px; 
-        font-size: 3em;       
+        margin: 0 auto 20px;
+        font-size: 3em;
     }
 
     #high-scores {
@@ -182,7 +182,7 @@ img {
         position: unset;
         max-width: fit-content;
         margin: -20px auto 20px;
-        font-size: 1.7em;       
+        font-size: 1.7em;
     }
 }
 
@@ -211,11 +211,11 @@ img {
         margin: 2px;
     }
 
-    #rules > h2 {
+    #rules>h2 {
         font-size: 1.7em;
     }
 
-    #rules > p {
+    #rules>p {
         font-size: 1.2em;
     }
 
@@ -228,7 +228,7 @@ img {
         margin-bottom: 10px;
     }
 
-    #scores-div > h3 {
+    #scores-div>h3 {
         font-size: 1.5em;
     }
 }
@@ -238,7 +238,7 @@ img {
         font-size: 1.3em;
     }
 
-    #scores-div > h3 {
+    #scores-div>h3 {
         font-size: 1.4em;
     }
 
@@ -258,6 +258,3 @@ img {
         margin: 0 10px;
     }
 }
-
-
-
