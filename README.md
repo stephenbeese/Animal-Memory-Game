@@ -1,5 +1,3 @@
-live link - https://stephenbeese.github.io/memory-game/
- 
 # Animal Memory Game
  
 Animal Memory Game is a fully responsive JavaScript game where a user will attempt to match all 12 randomly assorted cards in the quickest possible time. This game is mostly targeted towards children to help improve brain functions, such as attention, concentration, and focus. However, this game can be enjoyed by people of any age. The user’s best times are displayed at the bottom as an incentive to keep playing and improve their best time.
@@ -8,7 +6,7 @@ This site hopes to demonstrate how JavaScript works in a real world context.
  
 ## Website images
  
-<!-- Insert image here -->
+![Responsive Design](/assets/images/readme/responsive.png)
  
  
 ## Features
@@ -75,7 +73,7 @@ This site hopes to demonstrate how JavaScript works in a real world context.
 ## Testing
 <hr>
  
-- I tested this game in different browsers: Chrome and Safari.
+- I tested this game in different browsers: Chrome, Firefox and Safari.
  
 - I confirmed that the game runs as expected.
  
@@ -83,7 +81,7 @@ This site hopes to demonstrate how JavaScript works in a real world context.
  
 - I confirmed that the colour and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
  
-![Lighthouse](/assets/images/readme/Screenshot%202022-12-08%20at%2015.29.48.png)
+![Lighthouse](/assets/images/readme/lighthouse.png)
  
 - I confirmed that this site is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
  
