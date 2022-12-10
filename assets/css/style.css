@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     font-size: 3.4em;
     padding: 10px;
-    font-family: amatic SC, sans-serif;
+    font-family: 'amatic SC', sans-serif;
     font-weight: bold;
 }
 
@@ -24,17 +24,17 @@ h1 {
 }
 
 #rules > h2 {
-    font-family: Indie Flower, sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 2em;
 }
 
 #rules > p {
-    font-family: Indie Flower, sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 1.3em;
 }
 
 #start {
-    font-family: amatic SC;
+    font-family: 'amatic SC';
     margin: 0px 40% 20px;
     width: 20%;
     height: 50px;
@@ -52,7 +52,7 @@ h1 {
 }
 
 #scores-div > h3 {
-    font-family: Indie Flower, sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 1.6em;
     margin-left: 1em;
 }
@@ -82,7 +82,6 @@ img {
     opacity: 0;
 }
 
-
 .green {
     background-color: #0eb60e;
 }
@@ -92,7 +91,7 @@ img {
 }
 
 #message {
-    font-family: Indie Flower, sans-serif;
+    font-family: 'Indie Flower', sans-serif;
     text-align: center;
     font-size: 1.3em;
     top: 65px;
@@ -109,7 +108,7 @@ img {
 }
 
 .high-scores {
-    font-family: Indie Flower;
+    font-family: 'Indie Flower', sans-serif;
     font-size: 2em;
     float: right;
     position: relative;
@@ -258,10 +257,6 @@ img {
     #game-board {
         margin: 0 10px;
     }
-
-    /* .high-scores {
-        font-size: 1.5em;
-    } */
 }
 
 

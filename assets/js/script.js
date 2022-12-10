@@ -120,7 +120,7 @@ function checkMatch() {
 }
 
 function setTimer() {
-    var time = 0
+    var time = 0;
     let timer = document.getElementById('timer');
     let score = document.getElementById('score');
 
@@ -153,7 +153,7 @@ function addScore() {
         let start = document.getElementById('start');
         start.addEventListener('click', runGame); // adds eventlistener back to start button
 
-        setTimeout(updateHighScore, 2000)
+        setTimeout(updateHighScore, 2000);
     }
 }
 
@@ -162,7 +162,7 @@ function updateHighScore() {
     console.log(completionTime);
     highScores.push(parseInt(completionTime));
     highScores.sort((a, b) => a - b);
-    console.log(highScores)
+    console.log(highScores);
 
     let highScoreOne = document.getElementById('score-one');
     let highScoreTwo = document.getElementById('score-two');
@@ -171,7 +171,7 @@ function updateHighScore() {
     if (highScores.length === 1) {
         highScoreOne.innerHTML = `${highScores[0]} seconds`;
     } else if (highScores.length === 2) {
-        highScoreOne.innerHTML = `${highScores[0]} seconds`
+        highScoreOne.innerHTML = `${highScores[0]} seconds`;
         highScoreTwo.innerHTML = `${highScores[1]} seconds`;
     } else if (highScores.length >= 3) {
         highScoreOne.innerHTML = `${highScores[0]} seconds`;
