@@ -116,7 +116,7 @@ This site hopes to demonstrate how JavaScript works in a real world context.
    - Once ‘deploy from branch’ has been selected, select the main branch below and click save.
    - The page will automatically refresh and show that the site has been deployed with a live link at the top of the page.
  
-The live link can be found here: https://stephenbeese.github.io/memory-game/
+The live link can be found here: https://stephenbeese.github.io/Animal-Memory-Game/
  
 ## Credits
 <hr>
