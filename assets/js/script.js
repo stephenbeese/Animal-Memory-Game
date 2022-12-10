@@ -8,8 +8,11 @@ cards = cards.concat(cards); // doubles array
 
 let cardsPicked = []; // empty array for picked cards
 let cardIds = []; // empty array for picked cards id
-let highScores = [];
+let highScores = []; // empty array for a users best times
 
+/**
+ * This function starts is called when a user clicks start
+ */
 function runGame() {
     let start = document.getElementById('start');
     start.removeEventListener('click', runGame); // removes event listener to start game 
@@ -25,7 +28,6 @@ function runGame() {
             imgDiv.classList.remove('green'); // removes green class when starting a new game 
         }
         message.innerHTML = 'Start matching!';
-        // updateHighScore();
     }
     createGameBoard();
     setTimer();
@@ -71,8 +73,6 @@ function cardPicked() {
 
     document.getElementById(cardId).removeEventListener('click', cardPicked); // removes event listener from the cards picked
 
-    message.style.opacity = '0';
-
     if (cardsPicked.length === 2) {
         setTimeout(checkMatch, 100);
     }
@@ -89,7 +89,7 @@ function checkMatch() {
     let firstCardId = document.getElementById(cardIds[0]);
     let secondCardId = document.getElementById(cardIds[1]);
 
-    let firstCardParent = firstCardId.parentNode;
+    let firstCardParent = firstCardId.parentNode; // gets the cards parent 
     let secondCardParent = secondCardId.parentNode;
 
     if (card1 === card2) {
@@ -101,7 +101,7 @@ function checkMatch() {
     } else {
         firstCardParent.classList.add('red'); // sets unmatched cards background to red 
         secondCardParent.classList.add('red');
-        setTimeout(removeImage, 500);
+        setTimeout(removeImage, 500); // calls function to the revert image 
         message.innerHTML = "Not a match, please try again";
         message.style.opacity = "1";
     }
@@ -109,7 +109,7 @@ function checkMatch() {
     function removeImage() {
         firstCardParent.classList.remove('red'); // removes red background
         secondCardParent.classList.remove('red');
-        firstCardId.style.opacity = "0"; // makes image transparent again
+        firstCardId.style.opacity = "0"; // makes image transparent
         secondCardId.style.opacity = "0";
         firstCardId.addEventListener('click', cardPicked); // adds event listener back to image
         secondCardId.addEventListener('click', cardPicked);
@@ -119,16 +119,19 @@ function checkMatch() {
     cardIds = []; // clears array
 }
 
+/**
+ * Starts the timer once a user starts the game
+ */
 function setTimer() {
     var time = 0;
     let timer = document.getElementById('timer');
     let score = document.getElementById('score');
 
-    var timeIncrease = setInterval(function () {
+    var timeIncrease = setInterval(function () { // adds 1 to the timer every 1000 milliseconds.
         ++time;
         timer.innerHTML = time;
 
-        var checkScore = setInterval(function () { // checks if score is 120 every 1000 milliseconds to turn off timer
+        var checkScore = setInterval(function () { // checks if score is 120 every 100 milliseconds to turn off timer
             if (score.innerHTML === '120') {
                 clearInterval(timeIncrease);
                 clearInterval(checkScore);
@@ -143,7 +146,7 @@ function setTimer() {
  */
 function addScore() {
     let score = document.getElementById('score');
-    let addScore = parseInt(score.innerHTML) + 20;
+    let addScore = parseInt(score.innerHTML) + 20; // converts string to a number and adds 20
     score.innerHTML = addScore;
     let completionTime = document.getElementById('timer').innerHTML;
 
@@ -157,12 +160,14 @@ function addScore() {
     }
 }
 
+/**
+ * pushes the users completion time to an array and
+ * displays the top three scores
+ */
 function updateHighScore() {
     let completionTime = document.getElementById('timer').innerHTML;
-    console.log(completionTime);
     highScores.push(parseInt(completionTime));
     highScores.sort((a, b) => a - b);
-    console.log(highScores);
 
     let highScoreOne = document.getElementById('score-one');
     let highScoreTwo = document.getElementById('score-two');

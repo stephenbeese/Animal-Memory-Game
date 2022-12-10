@@ -17,6 +17,7 @@ h1 {
     font-weight: bold;
 }
 
+/* Rules Section */
 #rules {
     text-align: center;
     padding-bottom: 10px;
@@ -33,6 +34,12 @@ h1 {
     font-size: 1.3em;
 }
 
+/* Game-board Section*/
+#game-board {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 #start {
     font-family: 'amatic SC';
     margin: 0px 40% 20px;
@@ -44,50 +51,6 @@ h1 {
     text-align: center;
     font-size: 2em;
     font-weight: 800;
-}
-
-#game-board {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#scores-div>h3 {
-    font-family: 'Indie Flower', sans-serif;
-    font-size: 1.6em;
-    margin-left: 1em;
-}
-
-#grid {
-    text-align: center;
-    height: fit-content;
-    margin-bottom: 30px;
-}
-
-/* grid for images to sit */
-.img-div {
-    background-color: #27bbcb;
-    width: 160px;
-    height: 160px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 20px;
-}
-
-/* Images */
-img {
-    max-width: 80%;
-    height: 85%;
-    position: relative;
-    top: 10px;
-    opacity: 0;
-}
-
-.green {
-    background-color: #0eb60e;
-}
-
-.red {
-    background-color: #ff0000;
 }
 
 #message {
@@ -106,6 +69,48 @@ img {
     top: -1.6em;
     margin-bottom: -35px;
 }
+
+#scores-div>h3 {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 1.6em;
+    margin-left: 1em;
+}
+
+/* grid for images to sit */
+
+#grid {
+    text-align: center;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+
+.img-div {
+    background-color: #27bbcb;
+    width: 160px;
+    height: 160px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.green {
+    background-color: #0eb60e;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+/* Images */
+img {
+    max-width: 80%;
+    height: 85%;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+}
+
+/* High Score/Best Times Section*/
 
 .high-scores {
     font-family: 'Indie Flower', sans-serif;

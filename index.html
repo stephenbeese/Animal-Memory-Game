@@ -23,7 +23,7 @@
             <p>Click on the cards to reveal their image. Try and match all the cards in the quickest time.</p>
         </section>
 
-        <!-- Below is the gameboard that will be filled using javascript -->
+        <!--This section is the gameboard that is manipulated using javascript-->
         <section id="game-board">
             <button type="submit" id="start">Start</button>
             <p id="message">Start matching!</p>
@@ -32,6 +32,8 @@
                 <h3>Score: <span id="score">0</span></h3>
                 <h3 class="text-right">Timer: <span id="timer"></span>s</h3>
             </div>
+            
+            <!-- Below is the grid that is filled using javascript -->
             <div id="grid">
                 <div class="img-div"></div>
                 <div class="img-div"></div>
@@ -47,7 +49,8 @@
                 <div class="img-div"></div>
             </div>
         </section>
-
+        
+        <!--This section displays the users' best times-->
         <section class="high-scores">
             <h3>Your Best Times</h3>
             <ol id="high-scores">
