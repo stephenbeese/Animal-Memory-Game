@@ -16,7 +16,7 @@ This site hopes to demonstrate how JavaScript works in a real-world context.
  
    ![Heading](/assets/images/readme/header.png)
  
-- How to play
+- How to Play
  
    - Featured near the top of the page, this section explains to the user what they have to do when they have started the game.
    <br>
@@ -65,7 +65,7 @@ This site hopes to demonstrate how JavaScript works in a real-world context.
  
  
 ### Features Left to Implement
-- Shake animation
+- Shake Animation
    - When I learn to do so, I would like to implement a shake animation when a user picks a non-match. I feel this would add an extra feeling of interactivity when playing this game.
  
  
@@ -116,9 +116,9 @@ The live link can be found here: https://stephenbeese.github.io/Animal-Memory-Ga
 ## Credits
  
 ### Content
-- The fonts used for this site were taken from Google Fonts
-- The method on how to sort numbers in ascending order and randomly sort an array was taken from this [video](https://www.youtube.com/watch?v=xFhNgm73yJs&t)
+- The fonts used for this site were taken from [Google Fonts](https://fonts.google.com/).
+- The method on how to sort numbers in ascending order and randomly sort an array was taken from this [video](https://www.youtube.com/watch?v=xFhNgm73yJs&t).
  
 ### Media
-- The images were been taken from the open source site [freepik.com](https://www.freepik.com/free-vector/hand-drawn-farm-animal-collection_4595247.htm#query=cartoon%20animals&position=41&from_view=search&track=sph)
+- The images were been taken from the open source site [freepik.com](https://www.freepik.com/free-vector/hand-drawn-farm-animal-collection_4595247.htm#query=cartoon%20animals&position=41&from_view=search&track=sph).
 
