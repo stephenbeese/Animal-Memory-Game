@@ -3,11 +3,8 @@
 Animal Memory Game is a fully responsive JavaScript game where a user will attempt to match all 12 randomly assorted cards in the quickest possible time. This game is mostly targeted towards children to help improve brain functions, such as attention, concentration, and focus. However, this game can be enjoyed by people of any age. The user’s best times are displayed at the bottom as an incentive to keep playing and improve their best time.
  
 This site hopes to demonstrate how JavaScript works in a real world context.
- 
-## Website images
- 
+  
 ![Responsive Design](/assets/images/readme/responsive.png)
- 
  
 ## Features
 <hr>
@@ -18,20 +15,29 @@ This site hopes to demonstrate how JavaScript works in a real world context.
    - Featured at the top of the page, the heading "Animal Memory Game", is large and easily read by the user. Upon viewing the page, the user will be able to see what the game is and infer the type of game they will be playing.
 <br>
  
-![Heading](/assets/images/readme/header.png)
+      ![Heading](/assets/images/readme/header.png)
  
 - How to play
  
-   - Featured near the top of the page, this section briefly explains to the user what they have to do to start the game and what to do when they have started the game.
+   - Featured near the top of the page, this section explains clearly to the user what they have to do when they have started the game.
    <br>
  
-![How to play](/assets/images/readme/rules.png)
+      ![How to play](/assets/images/readme/rules.png)
  
 - Start Button
-   - Below the 'How to play' section there is a button labeled start. This should be intuitive to a user even if they haven't read the how to play section.
+   - Below the 'How to play' section there is a button labeled start. This should be intuitive to a user even if they haven't read the how to play section. This button reveals a message to the user to start matching.
 <br>
  
-![Start Button](/assets/images/readme/start-button.png)
+      ![Start Button](/assets/images/readme/start-button.png)
+
+- Display Messages
+   - The user will have a message displayed based on their input. For example, once a user has started a game they will be shown a message 'Start Matching!'.
+ 
+   - The user will also have a display message that will inform them on whether or not they've made a match.
+<br>
+ 
+      ![Start Matching](/assets/images/readme/message-one.png) ![Not a Match](/assets/images/readme/message-two.png)
+      ![Match](/assets/images/readme/message-three.png) ![Congratulations](/assets/images/readme/message-four.png)
  
 - Score and Timer
    - Once a user has opted to click start game, The timer will start counting up in seconds and stop when the user has matched all the cards correctly.
@@ -39,30 +45,22 @@ This site hopes to demonstrate how JavaScript works in a real world context.
    - When a user makes a match their score will increase by 20, if the two cards clicked are not a match then the score will stay the same. Once a player has matched all the cards their score will be 120, which in turn will stop the timer.
 <br>
  
-![Score](/assets/images/readme/score.png) ![Timer](/assets/images/readme/timer.png)
- 
- 
-- Display Messages
-   - The user will have a message displayed based on their input. For example, once a user has started a game they will be shown a message 'Start Matching!'.
- 
-   - The user will also have a display message that will inform them on whether or not they've made a match.
-<br>
- 
-![Start Matching](/assets/images/readme/message-one.png) ![Not a Match](/assets/images/readme/message-two.png)
-![Match](/assets/images/readme/message-three.png) ![Congratulations](/assets/images/readme/message-four.png)
+      ![Score](/assets/images/readme/score.png) ![Timer](/assets/images/readme/timer.png)
  
 - Card Colour Change
    - If a user matches two cards correctly then the matched cards will continue to show their image and have their backgrounds changed to green to indicate a match.
   
-   - If a user picks two different cards then the card's backgrounds will temporarily turn red before reverting back to the original blue background.
+   - If a user picks two different cards then the card's backgrounds will temporarily turn red before reverting back to their original blue colour.
  
    - This helps younger children who may not know how to read to understand if they made a match or not.
+
+   ![Green](/assets/images/readme/green.png) ![Red](/assets/images/readme/red.png)
  
 - Best Times
    - This section allows the user to view their top 3 completion times. This adds a competitive aspect to the game where a user can try to beat theirs or a friend's best time.
 <br>
  
-![Best Times](/assets/images/readme/best-times.png)
+      ![Best Times](/assets/images/readme/best-times.png)
  
  
 ### Features Left to Implement
@@ -81,7 +79,7 @@ This site hopes to demonstrate how JavaScript works in a real world context.
  
 - I confirmed that the colour and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
  
-![Lighthouse](/assets/images/readme/lighthouse.png)
+   ![Lighthouse](/assets/images/readme/lighthouse.png)
  
 - I confirmed that this site is responsive, looks good and functions on all standard screen sizes using the devtools device toolbar.
  
